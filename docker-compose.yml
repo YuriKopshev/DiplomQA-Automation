@@ -1,5 +1,10 @@
 version: '3'
 services:
+  node-app:
+    build: gate-simulator
+    image: node-app:1.0
+    ports:
+      - '9999:9999'
   mysql:
     image: mysql:8.0.19
     restart: always
@@ -22,7 +27,3 @@ services:
       - POSTGRES_USER=app
       - POSTGRES_PASSWORD=pass
 
-  nodejs:
-    build: ./gate-simulator
-    ports:
-      - "9999:9999"
