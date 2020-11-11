@@ -26,14 +26,17 @@ public class SqlUtils {
             System.out.println("SQL exception in clearTables");
         }
     }
+
     public static String findPaymentStatus() {
         val codesSQL = "SELECT status FROM payment_entity;";
         return getData(codesSQL);
     }
+
     public static String findCreditRequestStatus() {
         val codesSQL = "SELECT status FROM credit_request_entity;";
         return getData(codesSQL);
     }
+
     public static String findCountOrderEntity() {
         Long count = null;
         val codesSQL = " SELECT COUNT(*) FROM order_entity;";

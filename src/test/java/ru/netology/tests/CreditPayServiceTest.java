@@ -33,6 +33,9 @@ public class CreditPayServiceTest {
         SelenideLogger.removeListener("allure");
     }
 
+    /*positive scenarios
+     */
+
     @Test
     @DisplayName("Покупка в кредит,операция прошла успешно,в БД появилась запись со статусом APPROVED")
     void shouldConfirmCreditPayWithValidCard() {
@@ -53,6 +56,10 @@ public class CreditPayServiceTest {
         assertEquals("DECLINED", SqlUtils.findCreditRequestStatus());
 
     }
+
+       /*
+    negative scenarios
+     */
 
     @Test
     @DisplayName("Покупка в кредит по несуществующей карте,операция отклонена банком, " +

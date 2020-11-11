@@ -38,7 +38,7 @@ public class PaymentServiceTest {
      */
     @Test
     @DisplayName("Покупка по карте,операция прошла успешно,в БД появилась запись со статусом APPROVED")
-    void shouldConfirmPaymentWithValidCard()  {
+    void shouldConfirmPaymentWithValidCard() {
         val startPage = new StartChoosePage();
         val payment = startPage.goToPaymentPage();
         payment.putData(DataHelper.getValidCard());
