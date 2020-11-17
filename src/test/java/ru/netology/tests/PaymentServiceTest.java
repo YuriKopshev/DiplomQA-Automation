@@ -15,7 +15,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class PaymentServiceTest {
     @BeforeEach
     public void openPage() {
-        String url = "http://localhost:8080";
+        String url = System.getProperty("sut.url");
         open(url);
     }
 
