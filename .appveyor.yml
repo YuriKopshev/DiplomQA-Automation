@@ -17,4 +17,4 @@ install:
 
 build_script:
   - chmod +x gradlew
-  - ./gradlew-Ddb.url=jdbc:mysql://192.168.99.100:3306/app test --info "-Dselenide.headless=true"
+  - ./gradlew -Ddb.url=jdbc:mysql://192.168.99.100:3306/app test --info "-Dselenide.headless=true"
