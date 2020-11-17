@@ -4,7 +4,6 @@ import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Condition.exactText;
-import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$$;
 
 public class StartChoosePage {
@@ -13,7 +12,7 @@ public class StartChoosePage {
     private SelenideElement creditButton = $$("button").find(exactText("Купить в кредит"));
 
     public StartChoosePage() {
-        heading.shouldBe(visible);
+        //heading.shouldBe(visible);
     }
 
     public PaymentPage goToPaymentPage() {
