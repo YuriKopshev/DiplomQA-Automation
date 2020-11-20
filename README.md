@@ -58,3 +58,15 @@
 `gradlew allureServe` – открывает отчёт в браузере 
 
 * после окончания тестов завершить работу приложения, и остановить контейнеры командой `docker-compose down`
+
+## Сборка в Appveyor
+Для проведения CI в Appveyor:
+* генерируем файл appveyor.yml(все команды прописываем c localhost вместо 192.168.99.100)
+* меняем в application.properties 192.168.99.100 на localhost
+* запускаем сборку https://ci.appveyor.com
+
+Сборка со статусом failing по причине падающих тестов!
+
+[![Build status](https://ci.appveyor.com/api/projects/status/jxuhaw5dxqgriidl?svg=true)](https://ci.appveyor.com/project/YuriKopshev/diplomqa-automation)
+
+
